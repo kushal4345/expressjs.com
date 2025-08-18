@@ -41,13 +41,5 @@ The following table describes the properties of the optional `options` object.
 
 </div>
 
-#### Example: Different limits for specific routes
 
-You can apply `express.json()` with different `limit` values depending on the route:
 
-```js
-// Limit 5MB for /upload
-app.use('/upload', express.json({ limit: '5mb' }));
-
-// Default limit for other routes
-app.use(/^(?!\/upload$)/, express.json());
